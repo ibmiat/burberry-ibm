@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/loader.css">
+
+    <link rel="stylesheet" href="styles/partner.css">
+    <link rel="stylesheet" href="styles/commitment.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Burberry X IBM – Our Commitment</title>
+</head>
+
+<body>
+
+    <!-- Loading -->
+    <div id="loading-screen">
+        <img src="IMG/ibmlogo.png" alt="Loading Icon">
+    </div>
+
+    <!-- Top Navigation -->
+    <header class="top-nav">
+        <div class="nav-inner">
+
+            <!-- Burger toggle (visible on <= 600px) -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+                <span></span>
+            </label>
+
+            <!-- LEFT: nav items -->
+            <nav class="nav-menu" aria-label="Primary">
+                <a href="executive-summary.html" class="nav-link">Summary</a>
+                <a href="our-partnership.html" class="nav-link">Our Partnership</a>
+                <a href="proposed-team.html" class="nav-link">The Team</a>
+                <a href="why-ibm.html" class="nav-link">Why IBM</a>
+                <a href="best-of-ibm.html" class="nav-link nav-link--active">OUR COMMITMENT</a>
+                <a href="relevant-experience.html" class="nav-link">Experience</a>
+                <a href="your-team.html" class="nav-link">Your Team</a>
+            </nav>
+
+            <!-- RIGHT: logos -->
+            <div class="nav-logos">
+                <img src="IMG/burberry.png" alt="Burberry" class="nav-logo nav-logo--left">
+                <span class="nav-logo-divider"></span>
+                <img src="IMG/ibm.png" alt="IBM" class="nav-logo nav-logo--right">
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container-commitment">
+
+        <div class="row">
+            <div class="column">
+                <div class="head-main align-right-text">
+                    OUR COMMITMENT
+                </div>
+            </div>
+            <div class="column">
+                <!--STYLE THE COLUMNS BELOW LIKE THIS REFRENCE-->
+                <div class="column45">
+                    <img src="IMG/tile1.jpg" alt="IBM" class="commitment-img" id="tile1-trigger">
+                </div>
+
+                <div class="columnspace"></div>
+
+                <div class="column45">
+                    <!--Image 2-->
+                    <img src="IMG/tile2.jpg" alt="IBM" class="commitment-img" id="tile2-trigger">
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+    </main>
+
+    <div class="tile1-section">
+        <img src="IMG/tile1content.png" alt="IBM" class="tilecontent">
+    </div>
+
+    <div class="tile2-section">
+        <img src="IMG/tile2content.png" alt="IBM" class="tilecontent">
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tile1Trigger = document.getElementById('tile1-trigger');
+            const tile2Trigger = document.getElementById('tile2-trigger');
+            const tile1Section = document.querySelector('.tile1-section');
+            const tile2Section = document.querySelector('.tile2-section');
+
+            let openTile = null; // tracks which tile is open: 1, 2, or null
+
+            function showTile(tile) {
+                if (tile === openTile) {
+                    // Clicking the same tile again → close everything
+                    tile1Section.style.display = 'none';
+                    tile2Section.style.display = 'none';
+                    openTile = null;
+                    return;
+                }
+
+                if (tile === 1) {
+                    tile1Section.style.display = 'block';
+                    tile2Section.style.display = 'none';
+                    openTile = 1;
+                }
+                else if (tile === 2) {
+                    tile1Section.style.display = 'none';
+                    tile2Section.style.display = 'block';
+                    openTile = 2;
+                }
+            }
+
+            // Default: hide both
+            tile1Section.style.display = 'none';
+            tile2Section.style.display = 'none';
+
+            tile1Trigger.addEventListener('click', () => showTile(1));
+            tile2Trigger.addEventListener('click', () => showTile(2));
+        });
+    </script>
+
+
+
+
+
+
+    <script src="JS/loader.js"></script>
+    <script src="JS/main.js"></script>
+
+
+    <a href="relevant-experience.html" class="footer-next-fixed">NEXT</a>
+
+
+</body>
+
+</html>

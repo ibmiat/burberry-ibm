@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/loader.css">
+
+    <link rel="stylesheet" href="styles/partner.css">
+    <!-- Use a dedicated stylesheet for this page -->
+    <link rel="stylesheet" href="styles/team.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Burberry X IBM – Your Team</title>
+</head>
+
+<body>
+
+    <!-- Loading -->
+    <div id="loading-screen">
+        <img src="IMG/ibmlogo.png" alt="Loading Icon">
+    </div>
+
+    <!-- Top Navigation -->
+    <header class="top-nav">
+        <div class="nav-inner">
+
+            <!-- Burger toggle (visible on <= 600px) -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+                <span></span>
+            </label>
+
+            <!-- LEFT: nav items -->
+            <nav class="nav-menu" aria-label="Primary">
+                <a href="executive-summary.html" class="nav-link">Summary</a>
+                <a href="our-partnership.html" class="nav-link">Our Partnership</a>
+                <a href="proposed-team.html" class="nav-link">The Team</a>
+                <a href="why-ibm.html" class="nav-link">Why IBM</a>
+                <a href="best-of-ibm.html" class="nav-link">OUR COMMITMENT</a>
+                <a href="relevant-experience.html" class="nav-link">Experience</a>
+                <a href="your-team.html" class="nav-link nav-link--active">Your Team</a>
+            </nav>
+
+            <!-- RIGHT: logos -->
+            <div class="nav-logos">
+                <img src="IMG/burberry.png" alt="Burberry" class="nav-logo nav-logo--left">
+                <span class="nav-logo-divider"></span>
+                <img src="IMG/ibm.png" alt="IBM" class="nav-logo nav-logo--right">
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container-team">
+
+        <div class="head-main2">
+            YOUR TEAM
+        </div>
+
+        <br><br>
+
+        <section class="team-grid">
+
+            <!-- Card 1 -->
+            <article class="team-card">
+                <div class="team-photo-wrapper">
+                    <!-- Swap src with your actual filename if different -->
+                    <img src="IMG/team-stephen.png" alt="Stephen Taylor" class="team-photo">
+                </div>
+                <h2 class="team-name">STEPHEN TAYLOR</h2>
+                <p class="team-role">Burberry Account Partner</p>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="team-card">
+                <div class="team-photo-wrapper">
+                    <img src="IMG/team-graham.png" alt="Graham Parker" class="team-photo">
+                </div>
+                <h2 class="team-name">GRAHAM PARKER</h2>
+                <p class="team-role">Quality Partner</p>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="team-card">
+                <div class="team-photo-wrapper">
+                    <img src="IMG/team-elaine.png" alt="Elaine Parr" class="team-photo">
+                </div>
+                <h2 class="team-name">ELAINE PARR</h2>
+                <p class="team-role">VP, Consumer Retail &amp; Luxury</p>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="team-card">
+                <div class="team-photo-wrapper">
+                    <img src="IMG/team-katie.png" alt="Katie Williams" class="team-photo">
+                </div>
+                <h2 class="team-name">KATIE WILLIAMS</h2>
+                <p class="team-role">Retail Innovation Lead &amp; Luxury SME</p>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="team-card">
+                <div class="team-photo-wrapper">
+                    <img src="IMG/team-santosh.png" alt="Santosh Heroorker" class="team-photo">
+                </div>
+                <h2 class="team-name">SANTOSH HEROORKER</h2>
+                <p class="team-role">Service Delivery Manager</p>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="team-card">
+                <div class="team-photo-wrapper">
+                    <img src="IMG/team-tripti.png" alt="Tripti Gupta" class="team-photo">
+                </div>
+                <h2 class="team-name">TRIPTI GUPTA</h2>
+                <p class="team-role">Engagement Lead</p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <script src="JS/loader.js"></script>
+    <script src="JS/main.js"></script>
+
+    <!-- probably next should be thank-you.html, but leaving as-is -->
+    <a href="end.html" class="footer-next-fixed">NEXT</a>
+
+</body>
+
+</html>
