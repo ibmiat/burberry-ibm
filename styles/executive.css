@@ -1,0 +1,182 @@
+/* ===========================
+   Global box-sizing
+   =========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.column p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  font-weight: 300;
+  color: #555555;
+}
+
+.column strong {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+/* ===========================
+   Page container
+   =========================== */
+.page-container-partner {
+  position: relative;
+  padding: 160px 12%;   /* space for fixed nav + content */
+  width: 100%;
+  background: #fff;
+}
+
+/* ===========================
+   Columns
+   =========================== */
+.column {
+  float: left;
+  width: 50%;
+  height: 60vh;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+/* EXEC COLUMN LAYOUT */
+.column--exec {
+  height: 60vh;                /* fixed column height on desktop */
+  overflow: hidden;            /* no scroll inside this column */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;         /* center image + text horizontally */
+}
+
+/* Image fills almost all available height, but leaves space for the text */
+.exec-photo {
+  max-height: calc(100% - 60px);  /* leave room for name/title line */
+  width: auto;
+  object-fit: contain;            /* keep aspect ratio, fully visible */
+  display: block;
+}
+
+/* Name / title line under image */
+.exec-line {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;            /* keep all on one line on desktop */
+  flex-shrink: 0;                 /* prevent squashing */
+}
+
+.exec-name {
+    margin-top: 16px;
+    margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "adobe-garamond-pro", serif;
+    font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.exec-divider {
+  display: inline-block;
+  width: 1px;
+  height: 18px;
+  background-color: #555555;
+  opacity: 0.6;
+}
+
+.exec-title {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: #555555;
+}
+
+/* ===========================
+   Clearfix for row
+   =========================== */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ===========================
+   Typography
+   =========================== */
+.head-main {
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 400;
+  font-size: clamp(32px, 6vw, 72px);
+}
+
+.head-class {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.head-subclass {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 32px;
+  color: #555555;
+  line-height: 24px;
+}
+
+/* Break image (if used) */
+.break-img {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* ===========================
+   Responsive layout
+   =========================== */
+@media screen and (max-width: 800px) {
+  .page-container-partner {
+    padding: 80px 16px;
+  }
+
+  .column {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    padding: 10px 0;
+  }
+
+  .column--exec {
+    height: auto;
+    overflow: visible;
+    align-items: flex-start;   /* align to left on mobile */
+    padding-top: 0px;  
+  }
+
+  .exec-photo {
+    width: 100%;
+    height: auto;              /* normal responsive image on small screens */
+    max-height: none;
+  }
+
+  .exec-line {
+    white-space: normal;       /* allow wrapping on very small screens */
+    flex-wrap: wrap;
+  }
+
+  .head-class {
+    font-size: 24px;
+  }
+
+  .break-img {
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 23px;
+  }
+}

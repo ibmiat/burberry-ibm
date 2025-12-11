@@ -1,0 +1,178 @@
+/* ===========================
+   GLOBAL LAYOUT
+   =========================== */
+
+.column50 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.column-experience {
+  float: left;
+  width: 30%;
+  padding: 10px;
+}
+
+.column-experience-left {
+  float: left;
+  width: 70%;
+  padding: 10px;
+}
+
+.column30 {
+  float: left;
+  width: 30%;
+  padding: 0;
+}
+
+.column45 {
+  float: left;
+  width: 47%;
+  padding: 0;
+}
+
+.columnspace {
+  float: left;
+  width: 4%;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0);
+}
+
+.col-title {
+  float: left;
+  width: 35%;
+  padding: 0;
+}
+
+.col-rest {
+  float: left;
+  width: 65%;
+  padding: 0;
+}
+
+.align-right-text {
+  text-align: right;
+  margin-right: 32px;
+}
+
+.head-main2 {
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 400;
+  font-size: clamp(32px, 6vw, 40px);
+}
+
+/* Clear floats */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* ===========================
+   IMAGE TILES
+   =========================== */
+
+.commitment-img {
+  width: 96%;
+  transition: width 0.4s ease;
+}
+
+.commitment-img:hover {
+  width: 100%;
+}
+
+
+/* ===========================
+   PAGE CONTAINER
+   =========================== */
+
+.page-container-commitment {
+  position: relative;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 180px;
+  width: 100%;
+  background: #fff;
+}
+
+
+/* ===========================
+   TILE SECTIONS (Content Panels)
+   =========================== */
+
+.tile1-section,
+.tile2-section,
+.tile3-section {
+  display: none;              /* hidden by default */
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.tile1-section {
+  background-color: #E8E8E8;
+}
+
+.tile2-section {
+  background-color: #E6E1E1;
+}
+
+.tile3-section {
+  background-color: #E6E1E1;
+}
+
+.tilecontent {
+  width: 100%;
+}
+
+
+/* ===========================
+   MOBILE RESPONSIVE (≤ 600px)
+   =========================== */
+
+@media screen and (max-width: 600px) {
+  .column50,
+  .column-experience,
+  .column-experience-left {
+    width: 100%;
+  }
+
+  .column30 {
+  float: left;
+  width: 29%;
+  padding: 0;
+}
+
+.columnspace {
+  float: left;
+  width: 4%;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0);
+}
+
+  .page-container-commitment {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 100px;
+  }
+
+  .tile1-section,
+  .tile2-section,
+  .tile3-section {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .commitment-img {
+    width: 100%;
+  }
+
+  .align-right-text {
+  text-align: left;
+}
+}

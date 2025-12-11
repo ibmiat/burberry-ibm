@@ -1,0 +1,144 @@
+.column50 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.column45 {
+  float: left;
+  width: 47%;
+  padding: 0px;
+}
+
+.columnspace {
+  float: left;
+  width: 4%;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0);
+}
+
+.col-title {
+  float: left;
+  width: 35%;
+  padding: 0px;
+}
+
+.col-rest {
+  float: left;
+  width: 65%;
+  padding: 0px;
+}
+
+.align-right-text {
+  text-align: right;
+  margin-right: 32px;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.commitment-img {
+  width: 96%;
+  transition: width 0.4s ease;
+  /* smooth animation */
+}
+
+.commitment-img:hover {
+  width: 100%;
+}
+
+
+/* Page container */
+.page-container-commitment {
+  position: relative;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 180px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  background: #fff;
+}
+
+
+.tile1-section{
+  background-color: #E8E8E8;
+  padding-left: 16%;
+  padding-right: 16%;
+  padding-top: 100px;
+  padding-bottom: 130px;
+}
+
+.tile2-section{
+  background-color: #E6E1E1;
+  padding-left: 16%;
+  padding-right: 16%;
+  padding-top: 100px;
+  padding-bottom: 130px;
+}
+
+.tilecontent{
+  width: 100%;
+}
+
+.tile1-section,
+.tile2-section {
+  display: none;          /* hidden by default */
+}
+
+/* keep your existing padding / background colors */
+.tile1-section {
+  background-color: #E8E8E8;
+  padding-left: 16%;
+  padding-right: 16%;
+  padding-top: 100px;
+  padding-bottom: 130px;
+}
+
+.tile2-section {
+  background-color: #E6E1E1;
+  padding-left: 16%;
+  padding-right: 16%;
+  padding-top: 100px;
+  padding-bottom: 130px;
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column50 {
+    width: 100%;
+  }
+
+  .page-container-commitment {
+    position: relative;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 100px;
+    width: 100%;
+    background: #fff;
+  }
+
+  .tile1-section {
+  background-color: #E8E8E8;
+  padding-left: 16px;
+    padding-right: 16px;
+  padding-top: 100px;
+  padding-bottom: 130px;
+}
+
+.tile2-section {
+  background-color: #E6E1E1;
+  padding-left: 16px;
+    padding-right: 16px;
+  padding-top: 100px;
+  padding-bottom: 130px;
+}
+
+}

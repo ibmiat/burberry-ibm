@@ -1,0 +1,97 @@
+/* Make sure index.html can be full-height */
+html,
+body {
+  height: 100%;
+}
+
+/* Fullscreen hero container */
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background video */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* maintain ratio, crop edges as needed */
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+/* Overlay content (PNG + button) */
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Logo / PNG */
+.hero-logo {
+  max-width: 40%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+/* Landing page specific tweaks for the shared button */
+/* Landing page specific tweaks for the shared button */
+.hero-btn {
+  background: rgba(0, 0, 0, 0.00001);
+  border: 2px solid #fff;
+  color: #fff;
+
+  padding: 12px 24px;
+
+  border-radius: 1000px;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+
+  /* NEW — makes hover dissolve smoothly */
+  transition: 
+      background-color 0.35s ease,
+      color 0.35s ease,
+      border-color 0.35s ease,
+      opacity 0.35s ease;
+}
+
+.hero-btn:hover {
+  background-color: rgba(0, 0, 0, 1); /* fades in */
+  border-color: black;                 /* border dissolves to black */
+  color: white;
+  opacity: 0.95;                       /* soft fade feel */
+}
+
+
+
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .hero-logo {
+    max-width: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .hero-btn {
+    width: 100%;
+    max-width: 260px;
+  }
+}

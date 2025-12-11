@@ -1,0 +1,827 @@
+/* Global box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Page container */
+.page-container-partner {
+  position: relative;
+  padding: 220px 12%;
+  width: 100%;
+  background: #fff;
+}
+
+.page-container-why-ibm {
+  position: relative;
+  padding-top: 220px;
+  padding-bottom: 0px;
+  padding-right: 12%;
+  padding-left: 12%;
+  width: 100%;
+  background: #fff;
+}
+
+/* Columns */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.column-small {
+  float: left;
+  width: 20%;
+  padding: 10px;
+}
+
+.column-large {
+  float: left;
+  width: 80%;
+  padding: 10px;
+}
+
+.three-row {
+  display: flex;
+  align-items: stretch;
+  /* make all children equal height */
+  gap: 5%;
+  /* spacing between boxes */
+  margin-top: 0px;
+}
+
+/* Equal-height boxes */
+.three-row .three-box {
+  float: none;
+  /* override generic float */
+  width: auto;
+  /* let flex control width */
+
+  flex: 1 1 0;
+  /* share space evenly */
+  padding: 20px;
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+
+  display: flex;
+  /* allow vertical layout inside */
+  flex-direction: column;
+  justify-content: flex-start;
+
+  transition: all 0.25s ease;
+}
+
+/* Smooth hover */
+.three-row .three-box:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.section-head-text {
+  font-size: 36px;
+  font-weight: 400;
+  font-family: "adobe-garamond-pro", serif;
+  line-height: 38px;
+  text-align: right;
+  padding-right: 16px;
+}
+
+.edge-spacer {
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+.brands-section {
+  margin-right: 8%;
+  margin-left: 8%;
+  margin-top: 32px;
+}
+
+.card-section {
+  margin-right: 0%;
+  margin-left: 0%;
+}
+
+
+.brands-inner {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 32px;
+  /* keep all 5 cards in one row on desktop */
+  flex-wrap: nowrap;
+}
+
+/* Single card */
+.brand-card {
+  flex: 1 1 0;
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+
+  min-height: 180px;
+  padding: 24px 28px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  transition: all 0.25s ease;
+}
+
+/* Big heading in card */
+.brand-card-main {
+  font-family: "adobe-garamond-pro", serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+/* Body text */
+.brand-card-text {
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Hover: invert like other boxes */
+.brand-card:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* ===========================
+   RESPONSIVE (<= 800px)
+   =========================== */
+
+@media screen and (max-width: 800px) {
+  .brands-inner {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 16px;
+  }
+
+  .brand-card {
+    width: 100%;
+    min-height: 0;
+    /* let height be content-based on small screens */
+  }
+
+  .brand-card-main {
+    font-size: 24px;
+  }
+
+  .brand-card-text {
+    font-size: 13px;
+  }
+}
+
+.three-box {
+  float: left;
+  width: 30%;
+  padding: 20px;
+  border: 1px solid #000;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.three-box:hover {
+  border: 1px solid #000;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  background-color: black;
+  color: white;
+}
+
+.metric-body-text {
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 16px;
+  line-height: 20px;
+}
+
+.icon-box-col {
+  float: left;
+  width: 30%;
+}
+
+.col-text-head {
+  float: left;
+  width: 100%;
+  line-height: 20px;
+  padding-left: 0px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.three-gap {
+  display: none;
+
+}
+
+.icon-logo-small {
+  width: 100%;
+}
+
+/* Clearfix for row */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Typography */
+.head-main {
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 400;
+  font-size: clamp(32px, 6vw, 64px);
+}
+
+.head-class {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.head-subclass {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 32px;
+  color: #555555;
+  line-height: 24px;
+}
+
+
+.proposed-team-img {
+  width: 100%;
+}
+
+
+
+
+/* ===========================
+   IBM STERLING SECTION
+   =========================== */
+
+.oms-section {
+  margin-top: 80px;
+}
+
+.oms-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+/* LEFT: 60% width */
+.oms-left {
+  flex: 0 0 55%;
+  max-width: 55%;
+  padding-right: 64px;
+}
+
+/* RIGHT: 40% width */
+.oms-right {
+  flex: 0 0 45%;
+  max-width: 45%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Image */
+.oms-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Text styles */
+.oms-heading {
+  font-family: "Public Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.oms-body {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #555555;
+  max-width: 520px;
+}
+
+/* Metric boxes row */
+/* Metric boxes row */
+.oms-metrics {
+  display: flex;
+  flex-wrap: nowrap;
+  /* keep them side by side */
+  gap: 40px;
+  margin-top: 50px;
+  width: 80%;
+}
+
+/* Single metric box – equal width & height */
+.oms-metric {
+  flex: 1 1 0;
+  /* all three share the row equally */
+  border: 1px solid #000;
+  height: 150px;
+  /* consistent height for all three */
+  text-align: center;
+  cursor: default;
+  display: flex;
+  /* center content inside */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* inner spacing */
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+
+/* Number / value */
+.oms-metric-value {
+  font-family: "adobe-garamond-pro", serif;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+/* Label */
+.oms-metric-label {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+/* Hover effect: invert */
+.oms-metric:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* ===========================
+   TIMELINE
+   =========================== */
+
+.timeline-section {
+  margin-top: 40px;
+}
+
+.timeline {
+  position: relative;
+  padding: 40px 0 60px;
+  /* extra bottom space for text */
+}
+
+/* Long horizontal line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 80px;
+  /* line sits below the years */
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #f2f2f2;
+  z-index: 1;
+}
+
+/* Container for all year blocks */
+.timeline-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+  /* above the horizontal line */
+}
+
+/* Each year block */
+.timeline-item {
+  position: relative;
+  flex: 1 1 0;
+  text-align: center;
+  padding: 0 8px;
+  cursor: default;
+}
+
+/* Vertical line that crosses the horizontal line and connects to text */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 80px;
+  /* same as horizontal line */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 90px;
+  /* goes above & below the line */
+  background-color: #ffffff;
+  z-index: 1;
+  /* under the text */
+}
+
+/* Year text (above the line) */
+.timeline-year {
+  font-family: "adobe-garamond-pro", serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 32px;
+  /* space down to the line */
+  position: relative;
+  z-index: 3;
+  /* above lines */
+}
+
+/* Events (start below where the vertical line ends) */
+.timeline-events {
+  margin-top: 32px;
+  position: relative;
+  z-index: 3;
+  /* above lines */
+}
+
+.timeline-events p {
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #555555;
+  margin: 0 0 6px;
+}
+
+/* Hover: make all text for that year bold */
+.timeline-item:hover,
+.timeline-item:hover .timeline-events p {
+  font-weight: 600;
+}
+
+.margin-bottom-12 {
+  margin-bottom: 12px;
+}
+
+
+
+
+/*why ibm*/
+/* ===========================
+   INDUSTRY PRESENCE SECTION
+   =========================== */
+
+.industry-section {
+  margin-top: 80px;
+}
+
+.industry-inner {
+  display: flex;
+  align-items: stretch;
+  gap: 48px;
+}
+
+/* LEFT: big heading */
+.industry-heading {
+  flex: 0 0 22%;
+  max-width: 25%;
+  padding-right: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.industry-heading span {
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 400;
+  font-size: clamp(16px, 4vw, 42px);
+  line-height: 1.4;
+}
+
+/* RIGHT: grid of square cards (GRID VERSION) */
+.industry-grid {
+  flex: 1 1 auto;
+  display: grid;
+  gap: 32px;
+
+  /* Desktop: 6 columns => 6 cards in a row */
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+/* Single card */
+.industry-card {
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+
+  min-height: 180px;
+  padding: 24px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  transition: all 0.25s ease;
+}
+
+/* Big number / main stat */
+.industry-card-main {
+  font-family: "adobe-garamond-pro", serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+/* Smaller descriptive text */
+.industry-card-text {
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Hover: invert like your other boxes */
+.industry-card:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+
+
+/* ===========================
+   IMAGE CAROUSEL
+   =========================== */
+
+/* ===========================
+   IMAGE CAROUSEL
+   =========================== */
+
+.carousel-section {
+  margin: 80px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  padding-right: 24px;
+  /* ★ prevents final gap cut-off */
+  animation: carouselScroll 45s linear infinite;
+}
+
+/* Image sizing */
+.carousel-track img {
+  /* you can adjust height */
+  width: 300px;
+  /* ensures natural width */
+  flex-shrink: 0;
+  object-fit: cover;
+  /* optional */
+}
+
+.carousel-track2 {
+  display: flex;
+  gap: 20px;
+  padding-right: 20px;
+  /* ★ prevents final gap cut-off */
+  animation: carouselScroll 45s linear infinite;
+}
+
+/* Image sizing */
+.carousel-track2 img {
+  /* you can adjust height */
+  width: 500px;
+  /* ensures natural width */
+  flex-shrink: 0;
+  object-fit: cover;
+  /* optional */
+}
+
+.section-content {
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+/* Infinite scroll animation */
+@keyframes carouselScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    /* Move left by: (image width + 32px) * number of images */
+    transform: translateX(calc(-100% - (32px * 10)));
+  }
+}
+
+/* Responsive speed */
+@media screen and (max-width: 800px) {
+  .carousel-track {
+    animation-duration: 30s;
+  }
+}
+
+
+
+
+
+
+
+
+/* ===========================
+   RESPONSIVE BREAKPOINTS
+   =========================== */
+
+/* Medium: 3 × 2 layout */
+@media screen and (max-width: 1600px) {
+  .industry-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Small: 2 × 3 layout */
+@media screen and (max-width: 800px) {
+  .industry-inner {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .industry-heading {
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+
+  .industry-heading span {
+    font-size: 32px;
+  }
+
+  .industry-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .industry-card {
+    min-height: 160px;
+  }
+}
+
+
+
+
+
+
+
+/* Responsive layout */
+@media screen and (max-width: 800px) {
+  .column {
+    width: 100%;
+  }
+
+  .page-container-partner {
+    padding: 100px 16px;
+  }
+
+  .head-class {
+    font-size: 24px;
+  }
+
+  .three-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .three-row .three-box {
+    width: 100%;
+  }
+
+  .break-img {
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 23px;
+  }
+
+  .head-class {
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  .timeline {
+    overflow-x: auto;
+    /* allow horizontal scroll on small screens */
+  }
+
+  .timeline-items {
+    min-width: 700px;
+    /* preserves spacing between years */
+  }
+
+  .timeline-year {
+    font-size: 24px;
+  }
+
+  .timeline-events p {
+    font-size: 13px;
+  }
+
+  .oms-metrics {
+    display: flex;
+    flex-wrap: nowrap;
+    /* keep them side by side */
+    gap: 40px;
+    margin-top: 50px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .oms-inner {
+    flex-direction: column;
+  }
+
+  .oms-left,
+  .oms-right {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .oms-right {
+    justify-content: flex-start;
+    margin-top: 32px;
+  }
+
+  .oms-metrics {
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .oms-metric {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .column-small{
+    width: 100%;
+}
+
+.column-large{
+    width: 100%;
+}
+
+.page-container-why-ibm {
+  position: relative;
+  padding-top:40px;
+  padding-bottom: 0px;
+  padding-right: 16px;
+  padding-left: 16px;
+  width: 100%;
+  background: #fff;
+}
+
+.edge-spacer {
+  margin-right: 0%;
+  margin-left: 0%;
+}
+
+.section-content {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.section-head-text {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: "adobe-garamond-pro", serif;
+  line-height: 38px;
+  text-align: left;
+  padding-right: 16px;
+}
+
+.brands-section {
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 16px;
+}
+
+
+.card-section {
+  display: none;
+}
+
+
+}

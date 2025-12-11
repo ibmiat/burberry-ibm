@@ -1,0 +1,318 @@
+/* ===========================
+   TOP NAV BAR (DESKTOP BASE)
+   =========================== */
+
+.top-nav {
+  position: fixed;          /* changed from relative */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 999;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 64px;
+}
+
+/* Checkbox itself (used for :checked) */
+.nav-toggle {
+  display: none;
+}
+
+/* Burger icon label - hidden on desktop */
+.nav-toggle-label {
+  display: none;
+}
+
+/* LEFT SIDE NAV (DESKTOP) - scrollable strip */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  padding: 0;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Scrollbar styling (optional) */
+.nav-menu::-webkit-scrollbar {
+  height: 6px;
+}
+.nav-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+.nav-menu::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+}
+
+/* Links */
+.nav-link {
+  position: relative;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 400;
+  text-decoration: none;
+  color: #555555;
+  flex-shrink: 0;
+}
+
+.nav-link:hover{
+  color: black;
+  font-size: 14px;
+}
+
+.nav-link {
+  position: relative;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 400;
+  text-decoration: none;
+  color: #555555;
+  flex-shrink: 0;
+
+  /* Smooth transitions */
+  transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Subtle hover animation (color + slight scale-up) */
+.nav-link:hover {
+  color: black;
+  opacity: 0.85;
+  transform: translateY(-1px);   /* gentle lift */
+}
+
+/* Underline grows from center */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0%;
+  height: 1px;
+  background-color: black;
+
+  /* Animate outward */
+  transition: width 0.35s ease, left 0.35s ease;
+}
+
+/* Hover underline animation */
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+
+/* Active item */
+.nav-link--active {
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Underline on hover/active */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: #333333;
+  transition: width 0.18s ease;
+}
+
+.nav-link:hover::after,
+.nav-link--active::after {
+  width: 100%;
+}
+
+/* RIGHT SIDE LOGOS */
+.nav-logos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  margin-left: 24px;
+}
+
+.nav-logo {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-logo-divider {
+  display: inline-block;
+  width: 1px;
+  height: 22px;
+  background-color: #c4c4c4;
+}
+
+/* ===========================
+   MOBILE (<= 600px)
+   =========================== */
+
+@media (max-width: 600px) {
+  .nav-inner {
+    padding: 0 16px;
+    height: 56px;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  /* Show burger icon */
+  .nav-toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    cursor: pointer;
+  }
+
+  .nav-toggle-label span {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #333333;
+  }
+
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background-color: #333333;
+    transition: transform 0.2s ease, top 0.2s ease, bottom 0.2s ease, opacity 0.2s ease;
+  }
+
+  .nav-toggle-label span::before {
+    top: -6px;
+  }
+
+  .nav-toggle-label span::after {
+    bottom: -6px;
+  }
+
+  /* Logos pushed to the right */
+  .nav-logos {
+    margin-left: auto;
+  }
+
+  /* Mobile dropdown menu (hidden by default) */
+  .nav-menu {
+    position: absolute;
+    top: 56px; /* same as header height */
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+
+    display: none; /* hidden until burger checked */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding: 12px 16px 16px;
+    overflow-x: visible;
+    white-space: normal; /* allow text wrapping */
+  }
+
+  .nav-link {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+  }
+
+  .nav-link::after {
+    bottom: -4px;
+  }
+
+  /* SHOW MENU when checkbox is checked */
+  .nav-toggle:checked ~ .nav-menu {
+    display: flex;
+  }
+
+  /* Animate burger → X when checked */
+  .nav-toggle:checked + .nav-toggle-label span {
+    background-color: transparent;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+/* ===========================
+   PAGE CONTENT SPACING FOR FIXED NAV
+   =========================== */
+
+.page-container-partner {
+  padding-top: 64px; /* desktop header height */
+}
+
+@media (max-width: 600px) {
+  .page-container-partner {
+    padding-top: 56px; /* mobile header height */
+  }
+}
+
+
+.footer-next-fixed {
+  position: fixed;
+  bottom: 28px;
+  right: 32px;
+
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: 1px solid #000;
+
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  transition: 0.2s ease;
+  z-index: 12;
+  white-space: nowrap; /* keep text on one line but no overflow */
+}
+
+.footer-next-fixed:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* MOBILE FIX — prevent overflow */
+@media (max-width: 600px) {
+  .footer-next-fixed {
+    right: 16px;         /* smaller offset */
+    bottom: 20px;
+    padding: 12px 20px;  /* smaller padding */
+    font-size: 12px;     /* slightly smaller text */
+  }
+}

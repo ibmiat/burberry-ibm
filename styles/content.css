@@ -1,0 +1,176 @@
+/* =========================================
+   FIXED HEIGHT PAGE LAYOUT
+   The main content area fills the screen
+   minus the nav height and minus the footer.
+========================================= */
+
+:root {
+  --nav-height: 64px;
+  --footer-height: 80px;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.page-container {
+  position: relative;
+  height: calc(100vh - var(--nav-height) - var(--footer-height));
+  padding: 40px 12%;
+  display: flex;
+  background: #fff;
+}
+
+/* =========================================
+   TWO COLUMNS USING FLEX (no floats)
+========================================= */
+
+.content-columns {
+  display: flex;
+  width: 100%;
+  gap: 60px;
+}
+
+/* LEFT COLUMN (scrollable) */
+.column-left {
+  flex: 0 0 55%;
+  padding-top: 24px;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 24px;
+}
+
+.text-inner p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  font-weight: 300;
+  color: #555555;
+}
+
+.text-inner strong{
+    font-weight: 600;
+    color: black;
+}
+
+/* RIGHT COLUMN (centered image) */
+/* Right column layout */
+.column-right {
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* <- LEFT ALIGN everything under the image */
+  justify-content: center;
+  text-align: left;
+  padding-left: 32px;
+}
+
+/* Executive image */
+.ST-img {
+  width: 80%;
+  max-width: 380px;
+  display: block;
+  margin-bottom: 18px;
+}
+
+/* Name + title line */
+.exec-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;                    /* spacing between elements */
+  margin-left: 0;               /* aligns with image start */
+  white-space: nowrap;          /* keep all on one line */
+}
+
+/* Executive name */
+.exec-name {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000;
+  font-family: "adobe-garamond-pro", serif;
+}
+
+/* Divider between name + title */
+.exec-divider {
+  display: inline-block;
+  width: 0.7px;
+  height: 16px;
+  background-color: #555555;
+  opacity: 0.6;
+}
+
+/* Title text */
+.exec-title {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: #555555;
+}
+
+
+
+/* =========================================
+   FOOTER (pagination area)
+========================================= */
+
+/* =========================================
+   FIXED BOTTOM-RIGHT NEXT BUTTON
+========================================= */
+
+.footer-next-fixed {
+  position: fixed;
+  bottom: 28px;
+  right: 32px;
+
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: 1px solid #000;
+
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  transition: 0.2s ease;
+  z-index: 12; /* ALWAYS ABOVE CONTENT */
+}
+
+.footer-next-fixed:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* =========================================
+   MOBILE BREAKPOINT
+========================================= */
+@media (max-width: 900px) {
+
+  .page-container {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .content-columns {
+    flex-direction: column;
+  }
+
+  .column-left {
+    height: auto;
+    overflow: visible;
+  }
+
+  .column-right {
+    margin-top: 40px;
+  }
+
+  .page-footer {
+    padding-right: 20px;
+  }
+}

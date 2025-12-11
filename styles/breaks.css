@@ -1,0 +1,99 @@
+.break-img {
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.breaker-space{
+    margin-bottom:0px;
+}
+
+
+/* Container spacing */
+.performance-list-container {
+  margin: 32px 0;
+  max-width: 900px;            /* optional limit */
+}
+
+/* Intro sentence */
+.performance-intro {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+/* Numbered list */
+.performance-list {
+  list-style-position: outside; 
+  padding-left: 24px;          /* indent from numbers */
+  margin: 0;
+}
+
+.performance-list li {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #555555;
+  line-height: 24px;
+}
+
+.performance-list strong {
+  color: black;
+}
+
+/* Bold part aligned with screenshot */
+.performance-list li strong {
+  font-weight: 700;
+}
+
+
+.column60 {
+  float: left;
+  width: 60%;
+  padding: 10px;
+}
+
+.column40 {
+  float: left;
+  width: 40%;
+  padding-right: 64px;
+}
+
+
+
+.prop-team-break {
+  width: 100%;
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .break-img {
+        width: 100%;
+        margin-top: 24px;
+        margin-bottom: 0px;
+    }
+
+    .breaker-space-24{
+    margin-bottom:36px;
+}
+
+.column60 {
+  float: left;
+  width: 100%;
+  padding: 0px;
+}
+
+.column40 {
+  float: left;
+  width: 100%;
+  padding-right: 0px;
+}
+.prop-team-break {
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+}

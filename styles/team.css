@@ -1,0 +1,109 @@
+/* ===========================
+   YOUR TEAM PAGE
+   =========================== */
+
+/* Page container – aligns with other pages */
+.page-container-team {
+  position: relative;
+  padding: 180px 12% 80px;
+  width: 100%;
+  background: #fff;
+}
+
+.head-main2 {
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 400;
+  font-size: clamp(32px, 6vw, 40px);
+}
+
+/* Heading */
+.team-heading {
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 400;
+  font-size: clamp(32px, 6vw, 72px);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 48px;
+}
+
+/* Grid of team members */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* Individual card */
+.team-card {
+  text-align: center;
+}
+
+/* Photo area – keeps consistent aspect ratio */
+.team-photo-wrapper {
+  width: 100%;
+  aspect-ratio: 3 / 4;          /* modern browsers */
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+
+/* Image – fully responsive */
+.team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Name */
+.team-name {
+  font-family: "adobe-garamond-pro", serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 18px 0 6px;
+}
+
+/* Role */
+.team-role {
+  font-family: "Public Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #333;
+  margin: 0;
+}
+
+/* ===========================
+   RESPONSIVE BREAKPOINTS
+   =========================== */
+
+/* Large tablets / small desktops – 3 columns */
+@media screen and (max-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Tablets – 2 columns */
+@media screen and (max-width: 800px) {
+  .page-container-team {
+    padding: 140px 24px 60px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Small phones – 1 column */
+@media screen and (max-width: 500px) {
+  .page-container-team {
+    padding: 120px 16px 48px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
