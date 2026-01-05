@@ -218,6 +218,16 @@
   font-weight: 500;
 }
 
+.col-text-head2 {
+  font-family: "adobe-garamond-pro", serif;
+  float: left;
+  width: 100%;
+  line-height: 64px;
+  padding-left: 0px;
+  font-size: 42px;
+  font-weight: 500;
+}
+
 .three-gap {
   display: none;
 
@@ -239,6 +249,15 @@
   font-family: "adobe-garamond-pro", serif;
   font-weight: 400;
   font-size: clamp(32px, 6vw, 64px);
+}
+
+.head-main2 {
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 400;
+  font-size: clamp(24px, 6vw, 64px);
+  text-indent: 0;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .head-class {
