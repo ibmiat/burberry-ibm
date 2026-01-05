@@ -68,6 +68,12 @@
   margin-bottom: 100px;
 }
 
+.prop-team-break2 {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
 
 @media screen and (max-width: 800px) {
   .break-img {
