@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (btn) {
     btn.addEventListener("click", function () {
       // Change this filename if your executive summary page is named differently
-      window.location.href = "Introduction.html";
+      window.location.href = "introduction.html";
     });
   }
 });
