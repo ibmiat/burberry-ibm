@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/loader.css">
+
+    <link rel="stylesheet" href="styles/partner.css">
+    <!-- Use a dedicated stylesheet for this page -->
+    <link rel="stylesheet" href="styles/team.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Introduction</title>
+</head>
+
+<body>
+
+    <!-- Loading -->
+    <div id="loading-screen">
+        <img src="IMG/ibmlogo.png" alt="Loading Icon">
+    </div>
+
+    <!-- Top Navigation -->
+    <header class="top-nav">
+        <div class="nav-inner">
+
+            <!-- Burger toggle (visible on <= 600px) -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+                <span></span>
+            </label>
+
+            <!-- LEFT: nav items -->
+            <nav class="nav-menu" aria-label="Primary">
+                <a href="Introduction.html" class="nav-link nav-link--active">Introduction</a>
+                <a href="commitment.html" class="nav-link">Our Commitment</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="support.html" class="nav-link">Support & Maintenance</a>
+                <a href="implementation.html" class="nav-link">Implementation</a>
+                <a href="commercials.html" class="nav-link">Commercials</a>
+            </nav>
+
+            <!-- RIGHT: logos -->
+            <div class="nav-logos">
+                <img src="IMG/burberry.png" alt="Burberry" class="nav-logo nav-logo--left">
+                <span class="nav-logo-divider"></span>
+                <img src="IMG/ibm.png" alt="IBM" class="nav-logo nav-logo--right">
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container-team">
+
+        <div class="head-main2">
+            YOUR TEAM
+        </div>
+
+        <br><br>
+
+        <section class="team-grid">
+
+            <!-- Card 1 -->
+            <article class="team-card">
+                <div class="team-photo-wrapper">
+                    <!-- Swap src with your actual filename if different -->
+                    <img src="IMG/team-stephen.png" alt="Stephen Taylor" class="team-photo">
+                </div>
+                <h2 class="team-name">STEPHEN TAYLOR</h2>
+                <p class="team-role">Burberry Account Partner</p>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="team-card">
+                <div class="team-photo-wrapper">
+                    <img src="IMG/team-graham.png" alt="Graham Parker" class="team-photo">
+                </div>
+                <h2 class="team-name">GRAHAM PARKER</h2>
+                <p class="team-role">Quality Partner</p>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="team-card">
+                <div class="team-photo-wrapper">
+                    <img src="IMG/Govind-min.png" alt="Elaine Parr" class="team-photo">
+                </div>
+                <h2 class="team-name">Govind Neelakantan</h2>
+                <p class="team-role">OMS Architect, IBM Customer & Commerce Transformation</p>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="team-card">
+                <div class="team-photo-wrapper">
+                    <img src="IMG/Michelle-min.png" alt="Katie Williams" class="team-photo">
+                </div>
+                <h2 class="team-name">Michelle Spilling</h2>
+                <p class="team-role">Service Management SME</p>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="team-card">
+                <div class="team-photo-wrapper">
+                    <img src="IMG/team-katie.png" alt="Santosh Heroorker" class="team-photo">
+                </div>
+                <h2 class="team-name">Katie Williams</h2>
+                <p class="team-role">Retail Innovation Lead & Lux SME</p>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="team-card">
+                <div class="team-photo-wrapper">
+                    <img src="IMG/team-santosh.png" alt="Tripti Gupta" class="team-photo">
+                </div>
+                <h2 class="team-name">Santosh Heroorker</h2>
+                <p class="team-role">Offshore Delivery Leader</p>
+            </article>
+
+            <!-- Card 7 -->
+            <article class="team-card">
+                <div class="team-photo-wrapper">
+                    <img src="IMG/Nalini-min.png" alt="Tripti Gupta" class="team-photo">
+                </div>
+                <h2 class="team-name">Nalini Manuru</h2>
+                <p class="team-role">IBM Consulting Retail Leader, India</p>
+            </article>
+
+        </section>
+
+
+        <br><br><br><br><br><br><br>
+
+
+        <div class="head-main2">
+            OUR PARTNERSHIP SO FAR
+        </div>
+        <br><br>
+        <div class="scroll-horizontal">← Scroll horizontally →</div>
+        <br><br>
+
+        <div class="timeline-section-image">
+            <img src="IMG/timeline.png" alt="Tripti Gupta" class="timeline-photo">
+        </div>
+
+
+        <br><br><br>
+    </main>
+
+    <script src="JS/loader.js"></script>
+    <script src="JS/main.js"></script>
+
+    <!-- probably next should be thank-you.html, but leaving as-is -->
+    <a href="commitment.html" class="footer-next-fixed">NEXT</a>
+
+</body>
+
+</html>
