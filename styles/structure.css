@@ -1,0 +1,29 @@
+/* ===================================
+   TESTING SCALE SECTION STYLING
+   =================================== */
+
+.testing-scale-section {
+  display: flex;
+  align-items: center; /* Vertically align both sides */
+  justify-content: center; /* Center content horizontally if needed */
+  gap: 40px; /* Space between columns */
+  padding: 40px 20px; /* Padding around the section */
+}
+
+/* Left column */
+.testing-scale-left {
+  flex: 0 0 auto; /* Don't grow or shrink, size based on content */
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 400;
+  font-size: clamp(32px, 6vw, 40px);
+}
+
+/* Right column */
+.testing-scale-right {
+  flex: 1; /* Take remaining space */
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 32px;
+  color: #555555;
+  line-height: 24px;
+}
