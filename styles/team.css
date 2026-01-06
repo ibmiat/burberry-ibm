@@ -10,6 +10,39 @@
   background: #fff;
 }
 
+.inline-link {
+  color: black;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.inline-link:hover {
+  text-decoration: none;
+}
+
+
+.page-container-implementation {
+  position: relative;
+  padding: 180px 12% 0px;
+  width: 100%;
+  background: #fff;
+}
+
+.page-container-implementation2 {
+  position: relative;
+  padding: 0px 12% 0px;
+  width: 100%;
+  background: #fff;
+}
+
+
+.page-container-agenda {
+  position: relative;
+  padding: 120px 12% 80px;
+  width: 100%;
+  background: #fff;
+}
+
 .head-main2 {
   font-family: "adobe-garamond-pro", serif;
   font-weight: 400;
