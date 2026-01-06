@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+.agenda-photo{
+  width: 100%;
+}
+
+.agenda-spacer{
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
 /* Page container */
 .page-container-partner {
   position: relative;
@@ -27,6 +36,30 @@
 .column {
   float: left;
   width: 50%;
+  padding: 10px;
+}
+
+.column-30 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+}
+
+.column-40 {
+  float: left;
+  width: 40%;
+  padding: 10px;
+}
+
+.column-60 {
+  float: left;
+  width: 60%;
+  padding: 10px;
+}
+
+.column-70 {
+  float: left;
+  width: 70%;
   padding: 10px;
 }
 
@@ -89,9 +122,23 @@
   padding-right: 16px;
 }
 
+.section-head-text2 {
+  font-size: 40px;
+  font-weight: 400;
+  font-family: "adobe-garamond-pro", serif;
+  line-height: 46px;
+  text-align: right;
+  padding-right: 16px;
+}
+
 .edge-spacer {
   margin-right: 15%;
   margin-left: 15%;
+}
+
+.edge-spacer-more {
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 .brands-section {
@@ -260,10 +307,40 @@
   margin-left: 0;
 }
 
+.center-align{
+  text-align: center;
+}
+
+.head-main3 {
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 400;
+  font-size: clamp(24px, 6vw, 42px);
+  text-indent: 0;
+  padding-left: 0;
+  margin-left: 0;
+  text-align: right;
+  padding-right: 24px;
+}
+
+.head-main4 {
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 400;
+  font-size: clamp(24px, 6vw, 24px);
+  text-indent: 0;
+  padding-left: 0;
+  margin-left: 0;
+  text-align: left;
+  padding-right: 24px;
+}
+
 .head-class {
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 8px;
+}
+
+.add-top-margin{
+  margin-top: 12px;
 }
 
 .head-subclass {
@@ -535,6 +612,15 @@
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
+.industry-grid-4 {
+  flex: 1 1 auto;
+  display: grid;
+  gap: 32px;
+
+  /* Desktop: 6 columns => 6 cards in a row */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 /* Single card */
 .industry-card {
   border: 1px solid #000;
@@ -560,9 +646,23 @@
   margin-bottom: 8px;
 }
 
+.industry-card-main2 {
+  font-family: "adobe-garamond-pro", serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+
 /* Smaller descriptive text */
 .industry-card-text {
   font-size: 12px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.industry-card-text2 {
+  font-size: 14px;
   line-height: 1.6;
   font-weight: 300;
 }
@@ -585,7 +685,7 @@
    =========================== */
 
 .carousel-section {
-  margin: 80px 0;
+  margin: 0px 0;
   width: 100%;
   overflow: hidden;
 }
@@ -654,6 +754,10 @@
   .carousel-track {
     animation-duration: 30s;
   }
+
+  .head-main3 {
+    text-align: left;
+  }
 }
 
 
@@ -671,6 +775,9 @@
 @media screen and (max-width: 1600px) {
   .industry-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .industry-grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -691,6 +798,11 @@
   }
 
   .industry-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .industry-grid-4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
   }
@@ -813,6 +925,11 @@
 }
 
 .edge-spacer {
+  margin-right: 0%;
+  margin-left: 0%;
+}
+
+.edge-spacer-more {
   margin-right: 0%;
   margin-left: 0%;
 }
