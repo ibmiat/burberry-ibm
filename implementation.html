@@ -2,53 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/nav.css" />
-    <link rel="stylesheet" href="styles/loader.css">
+    <link rel="stylesheet" href="styles/loader.css" />
+    <link rel="stylesheet" href="styles/partner.css" />
+    <link rel="stylesheet" href="styles/team.css" />
+    <link rel="stylesheet" href="styles/breaks.css" />
+    <link rel="stylesheet" href="styles/experience.css" />
 
-    <link rel="stylesheet" href="styles/partner.css">
-    <!-- Use a dedicated stylesheet for this page -->
-    <link rel="stylesheet" href="styles/team.css">
-    <link rel="stylesheet" href="styles/breaks.css">
-    <link rel="stylesheet" href="styles/experience.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300;400;500;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
 
     <title>Implementation</title>
 </head>
 
 <body>
-
     <!-- Loading -->
     <div id="loading-screen">
-        <img src="IMG/ibmlogo.png" alt="Loading Icon">
+        <img src="IMG/ibmlogo.png" alt="Loading Icon" />
     </div>
 
     <!-- Top Navigation -->
     <header class="top-nav">
         <div class="nav-inner">
-
             <!-- Burger toggle (visible on <= 600px) -->
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" />
             <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
                 <span></span>
             </label>
 
             <!-- LEFT: nav items -->
             <nav class="nav-menu" aria-label="Primary">
-                <a href="introduction.html" class="nav-link">Introduction</a>
+                <a href="agenda.html" class="nav-link">Agenda</a>
                 <a href="commitment.html" class="nav-link">Our Commitment</a>
                 <a href="services.html" class="nav-link">Services</a>
                 <a href="support.html" class="nav-link">Support & Maintenance</a>
@@ -58,90 +50,272 @@
 
             <!-- RIGHT: logos -->
             <div class="nav-logos">
-                <img src="IMG/burberry.png" alt="Burberry" class="nav-logo nav-logo--left">
+                <img src="IMG/burberry.png" alt="Burberry" class="nav-logo nav-logo--left" />
                 <span class="nav-logo-divider"></span>
-                <img src="IMG/ibm.png" alt="IBM" class="nav-logo nav-logo--right">
+                <img src="IMG/ibm.png" alt="IBM" class="nav-logo nav-logo--right" />
             </div>
         </div>
     </header>
 
-    <main class="page-container-team">
-
-
-        <!--Transition Plan and resources-->
-        <div class="row">
-            <div class="column">
-                <div class="head-main2">TRANSITION PLAN AND RESOURCES</div>
-
-            </div>
-            <div class="column">
-                <div class="head-subclass">
-                    As we are already working with you in the existing OMS scope, transition is limited to the new scope
-                    areas in L2 and Test only. We know your team, ways of working and bring an extended plan to minimise
-                    transition required across the estate.   
-
+    <main class="page-container-implementation">
+        <!-- Transition Plan and resources -->
+        <div class="edge-spacer-more">
+            <div class="row">
+                <div class="column">
+                    <div class="section-head-text">TRANSITION PLAN AND RESOURCES</div>
+                </div>
+                <div class="column">
+                    <div class="head-subclass">
+                        As we are already working with you in the existing OMS scope, transition is limited to the new
+                        scope areas
+                        in L2 and Test only. We know your team, ways of working and bring an extended plan to minimise
+                        transition
+                        required across the estate.
+                    </div>
                 </div>
             </div>
         </div>
 
-        <br><br><br>
+        <br />
 
+        <img src="IMG/implementation1-min.png" alt="Transition Plan" class="proposed-team-img" />
 
-        <img src="IMG/implement1.png" alt="Paris" class="proposed-team-img">
+        <br /><br />
 
-        <br><br>
+        <img src="IMG/break.png" alt="Break" class="prop-team-break" />
 
-        <img src="IMG/break.png" alt="Paris" class="prop-team-break">
+        <!-- Knowledge Transfer Method -->
+        <div class="head-main2 center-align">OUR KNOWLEDGE TRANSFER METHOD</div>
 
+        <br /><br /><br /><br />
 
+        <img src="IMG/Imp2-min.png" alt="Knowledge Transfer" class="proposed-team-img" />
 
-        <br><br><br><br>
+        <br /><br />
 
-        <!--KNOWLEDGE TRANSFER METHOD-->
+        <img src="IMG/break.png" alt="Break" class="prop-team-break" />
 
+        <br /><br />
 
-        <div class="head-main2">OUR KNOWLEDGE TRANSFER METHOD</div>
+        <!-- OUR COMMITMENT (MODAL TRIGGERS) -->
+        <div class="row">
+            <div class="column-40">
+                <div class="head-main2 align-right-text">OUR <BR>COMMITMENT</div>
+            </div>
+
+            <div class="column">
+                <div class="column45">
+                    <img src="IMG/tile1.jpg" alt="Our Commitment Tile 1" class="commitment-img modal-trigger"
+                        data-modal-src="IMG/tile1content.png" data-modal-alt="Our Commitment – Tile 1" />
+                </div>
+
+                <div class="columnspace"></div>
+
+                <div class="column45">
+                    <img src="IMG/tile2.jpg" alt="Our Commitment Tile 2" class="commitment-img modal-trigger"
+                        data-modal-src="IMG/tile2content.png" data-modal-alt="Our Commitment – Tile 2" />
+                </div>
+            </div>
+        </div>
+
+        <img src="IMG/break.png" alt="Break" class="prop-team-break" />
 
         <BR><BR>
 
-        <div class="head-subclass">
-                    Throughout each KT wave, we’re progressively building our knowledge through sprints. We follow our three-stage agile KT approach; plan, learn, and perform. We grow our knowledge and experience by taking responsibility for resolving increasingly more complex tasks under the supervision of the incumbent suppliers. We begin by resolving low-priority tickets and routine tasks and gradually move towards higher-priority incidents and periodic activities. By the time KT is complete, we’ll have garnered hands-on experience in resolving tasks of all complexities.
-                    <br><br>
-                    At the end of each sprint, we review the knowledge we've acquired. During the final sprint, the former suppliers must approve our knowledge and capabilities to ensure they meet your business SMEs' satisfaction. Without this sign-off, we cannot take on the responsibility of cutover.  
+        <!-- AI Leadership -->
+        <div class="edge-spacer-more">
+            <div class="row">
+                <div class="column-30">
+                    <div class="section-head-text2">AI LEADERSHIP</div>
+                </div>
+                <div class="column-70">
+                    <div class="head-subclass">
+                        <B>IBM CONSULTING IS AT THE FOREFRONT OF AI</B>
+                        <br>
+                        Our capabilities in AI continues to grow exponentially, as we support clients globally to solve
+                        new challenges, at speed.  IBM has 83,000+ generative AI trained practitioners and we are
+                        rapidly expanding our ecosystem capabilities with generative and agentic AI to better serve our
+                        clients.
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <br /><br />
+
+        <div class="card-section">
+            <div class="brands-inner">
+                <div class="brand-card">
+                    <div class="brand-card-main">1st of its kind<br />in the market</div>
+                    <div class="brand-card-text">AI-powered consulting delivery platform: IBM Consulting Advantage.
+                    </div>
                 </div>
 
+                <div class="brand-card">
+                    <div class="brand-card-main">Ranked AI<br />Services Leader</div>
+                    <div class="brand-card-text">IDC analyst ranking 2024.</div>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-card-main">5,500</div>
+                    <div class="brand-card-text">
+                        security professionals supported with AI assistants to globally monitor 4.7 trillion security
+                        events per
+                        month.
+                    </div>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-card-main">5–7x</div>
+                    <div class="brand-card-text">
+                        AI value realization with IBM Garage — now powered by AI — over traditional approaches.
+                    </div>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-card-main">MILLIONS</div>
+                    <div class="brand-card-text">
+                        of IBM Institute for Business Value survey data points accessible for our consultants via AI
+                        assistants.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br /><br /><br /><br />
+    </main>
+
+    <!-- Carousel -->
+    <section class="carousel-section">
+        <div class="carousel">
+            <div class="carousel-track2">
+                <img src="IMG/carousel2/1.png" alt="" />
+                <img src="IMG/carousel2/2.png" alt="" />
+                <img src="IMG/carousel2/3.png" alt="" />
+                <img src="IMG/carousel2/4.png" alt="" />
+                <img src="IMG/carousel2/5.png" alt="" />
+
+                <img src="IMG/carousel2/1.png" alt="" />
+                <img src="IMG/carousel2/2.png" alt="" />
+                <img src="IMG/carousel2/3.png" alt="" />
+                <img src="IMG/carousel2/4.png" alt="" />
+                <img src="IMG/carousel2/5.png" alt="" />
+            </div>
+        </div>
+    </section>
+
+    <main class="page-container-implementation2">
+        <br /><br />
+
+        <img src="IMG/break.png" alt="Break" class="prop-team-break" />
+
+        <!-- RELEVANT EXPERIENCE (MODAL TRIGGERS) -->
+        <div class="row">
+            <div class="column-experience">
+                <div class="head-main2 align-right-text">RELEVANT EXPERIENCE</div>
+            </div>
+
+            <div class="column-experience-left">
+                <div class="column30">
+                    <img src="IMG/1.png" alt="Relevant Experience 1" class="commitment-img modal-trigger"
+                        data-modal-src="IMG/Abercrombie.png" data-modal-alt="Abercrombie" />
+                </div>
+
+                <div class="columnspace"></div>
+
+                <div class="column30">
+                    <img src="IMG/2.png" alt="Relevant Experience 2" class="commitment-img modal-trigger"
+                        data-modal-src="IMG/Addidas.png" data-modal-alt="Adidas" />
+                </div>
+
+                <div class="columnspace"></div>
+
+                <div class="column30">
+                    <img src="IMG/3.png" alt="Relevant Experience 3" class="commitment-img modal-trigger"
+                        data-modal-src="IMG/pandora.png" data-modal-alt="Pandora" />
+                </div>
+            </div>
+        </div>
+
+
+        <img src="IMG/break.png" alt="Break" class="prop-team-break" />
+
+        <br>
+
+
+        <!--AI Usage and Guardrails-->
+        <img src="IMG/useage-min.png" alt="Paris" class="proposed-team-img">
         <br><br><br>
 
-
-        <img src="IMG/Imp2.png" alt="Paris" class="proposed-team-img">
-
-        <br><br>
-
-        <img src="IMG/break.png" alt="Paris" class="prop-team-break">
-
-
-
-        <br><br><br><br>
+        <div class="head-subclass">
+            IBM’s views around ethics and artificial intelligence are publicly shared and can be found here:
+            <a href="https://www.ibm.com/think/topics/ai-ethics" target="_blank" rel="noopener noreferrer"
+                class="inline-link">
+                https://www.ibm.com/think/topics/ai-ethics
+            </a>
+        </div>
 
 
-        <!--IBM invested AI & Guardrails-->
-
-        <div class="head-main2">IBM INVESTED AI & GUARDRAILS</div>
-
-
-
-        <br><br><br><br><br><br><br><br>
-
-
+        <br><br><br><br><br><br><br><br><br><br><br>
     </main>
+
+    <!-- ONE MODAL (used by BOTH sections) -->
+    <div class="ibm-modal" id="ibmModal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="ibm-modal__backdrop" data-close="true"></div>
+
+        <div class="ibm-modal__panel" role="document" aria-label="Image modal">
+            <button class="ibm-modal__close" type="button" aria-label="Close modal" data-close="true">&#10005;</button>
+
+            <div class="ibm-modal__content">
+                <img id="ibmModalImg" class="ibm-modal__img" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Logic (single handler for all .modal-trigger elements) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("ibmModal");
+            const modalImg = document.getElementById("ibmModalImg");
+
+            function openModal(src, alt) {
+                modalImg.src = src;
+                modalImg.alt = alt || "";
+                modal.classList.add("is-open");
+                modal.setAttribute("aria-hidden", "false");
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeModal() {
+                modal.classList.remove("is-open");
+                modal.setAttribute("aria-hidden", "true");
+                modalImg.src = "";
+                modalImg.alt = "";
+                document.body.style.overflow = "";
+            }
+
+            document.querySelectorAll(".modal-trigger").forEach((el) => {
+                el.addEventListener("click", () => {
+                    const src = el.dataset.modalSrc;
+                    const alt = el.dataset.modalAlt;
+                    if (src) openModal(src, alt);
+                });
+            });
+
+            modal.addEventListener("click", (e) => {
+                if (e.target.closest('[data-close="true"]')) closeModal();
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+            });
+        });
+    </script>
 
     <script src="JS/loader.js"></script>
     <script src="JS/main.js"></script>
 
-    <!-- probably next should be thank-you.html, but leaving as-is -->
     <a href="commercials.html" class="footer-next-fixed">NEXT</a>
-
 </body>
 
 </html>
