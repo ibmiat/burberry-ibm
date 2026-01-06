@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/loader.css">
+
+    <link rel="stylesheet" href="styles/partner.css">
+    <!-- Use a dedicated stylesheet for this page -->
+    <link rel="stylesheet" href="styles/team.css">
+    <link rel="stylesheet" href="styles/breaks.css">
+    <link rel="stylesheet" href="styles/experience.css">
+    <link rel="stylesheet" href="styles/structure.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Services</title>
+</head>
+
+<body>
+
+    <!-- Loading -->
+    <div id="loading-screen">
+        <img src="IMG/ibmlogo.png" alt="Loading Icon">
+    </div>
+
+    <!-- Top Navigation -->
+    <header class="top-nav">
+        <div class="nav-inner">
+
+            <!-- Burger toggle (visible on <= 600px) -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+                <span></span>
+            </label>
+
+            <!-- LEFT: nav items -->
+            <nav class="nav-menu" aria-label="Primary">
+                <a href="agenda.html" class="nav-link">Agenda</a>
+                <a href="commitment.html" class="nav-link">Introduction</a>
+                <a href="services.html" class="nav-link nav-link--active">Services</a>
+                <a href="support.html" class="nav-link">Support & Maintenance</a>
+                <a href="implementation.html" class="nav-link">Implementation</a>
+                <a href="commercials.html" class="nav-link">Commercials</a>
+            </nav>
+
+            <!-- RIGHT: logos -->
+            <div class="nav-logos">
+                <img src="IMG/burberry.png" alt="Burberry" class="nav-logo nav-logo--left">
+                <span class="nav-logo-divider"></span>
+                <img src="IMG/ibm.png" alt="IBM" class="nav-logo nav-logo--right">
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container-agenda">
+
+        <!--LEADING SERVICES ---------------------->
+
+        <img src="IMG/leading-services-updated-min.png" alt="Paris" class="proposed-team-img">
+
+        <br><br>
+
+        <img src="IMG/break.png" alt="Paris" class="prop-team-break">
+
+        <br><br><br><br>
+
+        <!--Services 2-->
+
+
+        <img src="IMG/Updated-portfolio-min.png" alt="Paris" class="proposed-team-img">
+
+        <br><br>
+
+        <img src="IMG/break.png" alt="Paris" class="prop-team-break">
+
+        <br><br><br>
+
+        <!--Services 3-->
+
+
+        <div class="row">
+            <div class="column-experience">
+                <div class="head-main2 align-right-text">
+                    RELEVANT EXPERIENCE
+                </div>
+            </div>
+            <div class="column-experience-left">
+                <!--STYLE THE COLUMNS BELOW LIKE THIS REFRENCE-->
+                <div class="column30">
+                    <img src="IMG/1.png" alt="IBM" class="commitment-img" id="tile1-trigger">
+                </div>
+
+                <div class="columnspace"></div>
+
+                <div class="column30">
+                    <!--Image 2-->
+                    <img src="IMG/2.png" alt="IBM" class="commitment-img" id="tile2-trigger">
+                </div>
+
+                <div class="columnspace"></div>
+
+                <div class="column30">
+                    <!--Image 3-->
+                    <img src="IMG/3.png" alt="IBM" class="commitment-img" id="tile3-trigger">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="ibm-modal" id="ibmModal" aria-hidden="true" role="dialog" aria-modal="true">
+            <div class="ibm-modal__backdrop" data-close="true"></div>
+
+            <div class="ibm-modal__panel" role="document" aria-label="Case study modal">
+                <button class="ibm-modal__close" type="button" aria-label="Close modal" data-close="true">
+                    &#10005;
+                </button>
+
+                <div class="ibm-modal__content">
+                    <img id="ibmModalImg" class="ibm-modal__img" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const tile1Trigger = document.getElementById('tile1-trigger');
+                const tile2Trigger = document.getElementById('tile2-trigger');
+                const tile3Trigger = document.getElementById('tile3-trigger');
+
+                const modal = document.getElementById('ibmModal');
+                const modalImg = document.getElementById('ibmModalImg');
+
+                const tileMap = {
+                    'tile1-trigger': { src: 'IMG/Abercrombie.png', alt: 'Abercrombie' },
+                    'tile2-trigger': { src: 'IMG/Addidas.png', alt: 'Adidas' },
+                    'tile3-trigger': { src: 'IMG/pandora.png', alt: 'Pandora' },
+                };
+
+                function openModal({ src, alt }) {
+                    modalImg.src = src;
+                    modalImg.alt = alt || '';
+                    modal.classList.add('is-open');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeModal() {
+                    modal.classList.remove('is-open');
+                    modal.setAttribute('aria-hidden', 'true');
+                    modalImg.src = '';
+                    modalImg.alt = '';
+                    document.body.style.overflow = '';
+                }
+
+                function handleTileClick(e) {
+                    const data = tileMap[e.currentTarget.id];
+                    if (!data) return;
+                    openModal(data);
+                }
+
+                tile1Trigger?.addEventListener('click', handleTileClick);
+                tile2Trigger?.addEventListener('click', handleTileClick);
+                tile3Trigger?.addEventListener('click', handleTileClick);
+
+                // Close when clicking backdrop or close button
+                modal.addEventListener('click', (e) => {
+                    const close = e.target.closest('[data-close="true"]');
+                    if (close) closeModal();
+                });
+
+                // Close on ESC
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+                        closeModal();
+                    }
+                });
+            });
+        </script>
+
+
+        <!-- SERVICE 4-->
+
+        <!--<img src="IMG/break.png" alt="Paris" class="prop-team-break">
+
+        <br><br><br><br>
+
+        <div class="head-main2">
+            END-TO-END WORKFLOW
+        </div>
+
+        <br><br><br>
+
+
+        <img src="IMG/services4.png" alt="Paris" class="proposed-team-img">-->
+
+        <br><br>
+
+        <img src="IMG/break.png" alt="Paris" class="prop-team-break">
+
+
+        <!-- SERVICE 5-->
+
+
+
+        <br><br><br>
+
+
+        <img src="IMG/testatscale-update-min.png" alt="Paris" class="proposed-team-img">
+
+        <br><br>
+
+        <img src="IMG/break.png" alt="Paris" class="prop-team-break">
+
+        <br><br>
+
+
+
+        <!--ROBOT TEST AUTOMATION-->
+
+        <div class="head-main2 center-align">
+            ROBOT TEST AUTOMATION
+        </div>
+
+        <br><br>
+
+        <img src="IMG/robot.png" alt="Paris" class="proposed-team-img">
+
+        <br>
+
+
+        <br>
+
+        <img src="IMG/break.png" alt="Paris" class="prop-team-break">
+
+        <br><br>
+
+
+        <!--Store and Call Center Automation – Legacy-->
+
+        <div class="head-main2 center-align">
+            STORE AND CALL CENTER AUTOMATION - LEGACY
+        </div>
+
+        <br><br>
+
+        <img src="IMG/storeandcall.png" alt="Paris" class="proposed-team-img">
+
+        <br>
+
+
+        <br>
+
+        <img src="IMG/break.png" alt="Paris" class="prop-team-break">
+
+        <br><br><br><br>
+
+
+        <!--FRAMEWORK FOR AUTOMATION-->
+
+        <div class="edge-spacer-more">
+            <div class="row">
+                <div class="column">
+                    <div class="section-head-text">
+                        AUTOMATION AT BURBERRY
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="head-subclass">
+                        Applying automation in testing allows us to deliver value at speed across the OMS at Burberry.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <img src="IMG/automationatbb-min.png" alt="Paris" class="proposed-team-img">
+
+
+
+        <br>
+
+        <img src="IMG/break.png" alt="Paris" class="prop-team-break">
+
+        <br><br>
+
+        <!--AUTOMATION TIMELINE - WHATS NEXT-->
+
+        <div class="head-main2 center-align">
+            WHAT TO EXPECT TO SEE FROM IQP+ IN 2026
+        </div>
+
+        <br><br><br>
+
+        <img src="IMG/expectationupdate-min.png" alt="Paris" class="proposed-team-img">
+
+        <br>
+
+        <img src="IMG/break.png" alt="Paris" class="prop-team-break">
+
+        <br><br><br><br>
+
+
+
+        <!--China CBDT-->
+
+        <div class="row">
+            <div class="column">
+                <div class="head-main3">IBM Sterling in China:<br>
+                    System Context
+                </div>
+
+            </div>
+            <div class="column">
+                <div class="head-subclass">
+                    IBM Sterling Order Management and its components are available as certified Kubernetes containers
+                    that can be deployed on the hyperscaler of Burberry’s choice, to ensure data centres are located in
+                    China. The final architecture will be refined as the designs of other China‑based systems become
+                    clearer.
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+
+        <img src="IMG/SystemContext-min.png" alt="Paris" class="proposed-team-img">
+
+        <br>
+
+        <!--<img src="IMG/break.png" alt="Paris" class="prop-team-break">-->
+
+        <br><br><br><br>
+
+
+
+
+
+    </main>
+
+    <script src="JS/loader.js"></script>
+    <script src="JS/main.js"></script>
+
+    <!-- probably next should be thank-you.html, but leaving as-is -->
+    <a href="support.html" class="footer-next-fixed">NEXT</a>
+
+</body>
+
+</html>
