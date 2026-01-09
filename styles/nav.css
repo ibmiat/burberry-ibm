@@ -316,3 +316,17 @@
     font-size: 12px;     /* slightly smaller text */
   }
 }
+
+
+
+
+.video-out-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.video-out-link:focus,
+.video-out-link:active {
+    outline: none;
+}
+
